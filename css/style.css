@@ -232,6 +232,21 @@ footer .social-list:hover{
     justify-content: space-between;
 }
 
+ion-icon{
+    padding: 0.5rem;
+    border: 1px solid var(--white);
+    border-radius: 1rem;
+}
+
+ion-icon:hover{
+    border: 1px solid var(--pink);
+    color: var(--pink);
+}
+
+.copyright{
+    margin-top: 1rem;
+}
+
 @media screen and (max-width: 772px) {
     nav{
         margin-bottom: 4rem;
