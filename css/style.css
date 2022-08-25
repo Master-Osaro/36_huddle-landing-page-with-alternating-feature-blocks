@@ -1,0 +1,270 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* ### Primary */
+    --light-pink: hsl(322, 100%, 82%);
+    --pink: hsl(322, 100%, 66%);
+
+    /* ### Neutral */
+
+    --very-pale-cyan: hsl(193, 100%, 96%);
+    --very-dark-cyan: hsl(192, 100%, 9%);
+    --very-dark-cyan-transparent: hsla(192, 100%, 9%, 0.1);
+    --grayish-blue: hsl(208, 11%, 55%);
+    --white: hsl(0, 0%, 100%);
+
+    /* ## Typography */
+    /* ### Body Copy */
+    --font-size: 18px;
+
+    --font-open-sans: 'Open Sans', sans-serif;
+    --font-poppins: 'Poppins', sans-serif;
+}
+
+body{
+    font-family: var(--font-open-sans);
+    color: var(--grayish-blue);
+}
+
+h1,h2{
+    color: var(--very-dark-cyan);
+    font-family: var(--font-poppins);
+}
+
+h2{
+    margin-bottom: 1rem;
+}
+
+.button{
+    font-size: 1.15rem;
+    padding: 0.8rem 2.3rem;
+    border-radius: 2rem;
+    border: none;
+    background: var(--white);
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+.button--secondary{
+    box-shadow: 2px 4px 15px 2px var(--very-dark-cyan-transparent);
+    /* border-bottom: 2px solid var(--strong-cyan-darker); */
+}
+
+.button--primary{
+    background: var(--pink);
+    color: var(--white);
+}
+.button--primary:hover{
+    background: var(--light-pink);
+    color: var(--white);
+}
+
+
+header,
+main,
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.container__inner, .benefit, .footer__container{
+    max-width: 1200px;
+    width: 100%;
+    padding: 1rem;
+}
+
+header{
+    padding: 2rem 0;
+    background-color: var(--very-pale-cyan);
+    background-image: url(../images/bg-hero-desktop.svg);
+}
+
+main{
+    margin-top: 4rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.hero__wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hero__content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 3rem;
+}
+.hero__content input{
+    width: max-content;
+}
+.hero__image--wrapper{
+    flex: 1;
+}
+.hero__image{
+    width: 100%;
+    flex: 1;
+}
+
+.benefit,.ready{
+    padding: 1.5rem 1rem 1.5rem 3rem;
+    box-shadow: 2px 2px 10px 1px var(--very-dark-cyan-transparent);
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+}
+
+.benefit.benefit__conversation{
+    flex-direction: row-reverse;
+}
+
+.benefit__conversation--content{
+    margin-left: 3rem;
+}
+
+.benefit{
+    margin-bottom: 1rem;
+}
+.benefit p{
+    line-height: 1.65rem;
+}
+.benefit__grow--content,
+.benefit__conversation--content
+,.benefit__user--content{
+    flex: 1;
+}
+.benefit__grow--img,
+.benefit__conversation--img,
+.benefit__user--img{
+    flex: 1;
+    width: 100%;
+}
+
+.benefit__img--wrapper{
+    flex: 1;
+}
+
+.ready{
+    margin-bottom: 1rem;
+    flex-direction: column;
+    gap: 2rem;
+    transform: translateY(60px);
+    background: var(--white);
+}
+
+.ready input{
+    text-align: center;
+}
+footer{
+    background: var(--very-dark-cyan);
+    color: var(--white);
+    padding: 6rem 0;
+}
+
+.footer__container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+    gap: 1rem; 
+}
+
+.footer__container ul{
+list-style: none; 
+}
+.footer__container ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer__info, .nav-list{
+    display: flex;
+    flex-direction: column;
+}
+    
+
+.footer__info{
+    gap: 1.5rem;
+}
+
+.footer__logo{
+    grid-column: 1/-1;
+}
+.location,.phone,.email{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.copyright{
+    align-self: flex-end;
+}
+
+footer .footer__info,
+footer .nav-list,
+footer .social-list{
+    justify-self: center;
+    gap: 1.5rem
+}
+footer .social-list{
+display: flex;
+}
+footer .social-list:hover{
+    cursor: pointer;
+}
+
+.social-list--wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 772px) {
+    nav{
+        margin-bottom: 4rem;
+    }
+    .hero__wrapper{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .hero__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .benefit, 
+    .benefit.benefit__conversation{
+        flex-direction: column-reverse;
+    }
+
+    .benefit__grow--content,
+    .benefit__conversation--content
+    ,.benefit__user--content{
+        text-align: center;
+    }
+
+    .footer .footer__info,
+    footer .nav-list,
+    footer .social-list{
+        justify-self: flex-start;
+        gap: 1.5rem
+    }
+}
