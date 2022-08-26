@@ -236,6 +236,7 @@ ion-icon{
     padding: 0.5rem;
     border: 1px solid var(--white);
     border-radius: 1rem;
+    cursor: pointer;
 }
 
 ion-icon:hover{
