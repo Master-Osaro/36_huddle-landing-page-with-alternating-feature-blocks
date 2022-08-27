@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live Demo]()
+- Live Site URL: [Live Demo](https://huddle-landing-page-w-alternate-block.netlify.app/)
 
 ## My process
 
